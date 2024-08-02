@@ -6,8 +6,10 @@ const App = () => {
   const videoRef = useRef(null);
   const playerRef = useRef(null);
   const sources = [
-    'https://bgjokrb8n4my-hls-push.5centscdn.com/videoCampaign/video-1718000030557.mp4/playlist.m3u8',
-    'https://bgjokrb8n4my-hls-push.5centscdn.com/videoCampaign/video-1718000030557.mp4/playlist.m3u8',
+    // 'https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.mp4/.m3u8',
+    // 'https://bgjokrb8n4my-hls-push.5centscdn.com/videoCampaign/video-1718000030557.mp4/playlist.m3u8',
+   "https://bgjokrb8n4my-hls-push.5centscdn.com/videoCampaign/video-1718175888394.mp4/playlist.m3u8",
+  //  "https://bgjokrb8n4my-hls-push.5centscdn.com/videoCampaign/video-1718168549103.mp4/playlist.m3u8"
   ];
   useEffect(() => {
     const player = playerRef.current;
@@ -21,6 +23,7 @@ const App = () => {
         sources: sources.map(src => ({
           src,
           type: 'application/x-mpegURL',
+// type:'mp4'
         })),
       });
     }
